@@ -57,7 +57,15 @@ function Carousel() {
                     <span className="visually-hidden">Следующий</span>
                 </button>
             </div>
+            <div className="d-lg-none mt-3">
+                <div className="row d-flex justify-content-center align-items-center">
+                    <ReturnBookItem/>
+                </div>
+            </div>
 
+            <div className="homepage-carousel-title mt-2">
+                <a className="btn btn-outline-secondary btn-lg" href="/">Подробности</a>
+            </div>
         </div>
     );
 }

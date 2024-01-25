@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:8000/shop_db
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  data:
+    rest:
+      base-path: /api

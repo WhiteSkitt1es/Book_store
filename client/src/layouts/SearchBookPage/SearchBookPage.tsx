@@ -32,6 +32,7 @@ export const SearchBooksPage = () => {
                 let searchWithPage = searchUrl.replace("<pageNumber>", `${currentPage - 1}`);
                 url = `${baseUrl}${searchWithPage}`
             }
+
             const response = await fetch(url);
 
             if (!response.ok) {

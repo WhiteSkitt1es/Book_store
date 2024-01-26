@@ -17,3 +17,18 @@ CREATE TABLE product
 ) engine = InnoDB
   auto_increment = 1
   default charset = utf8mb3;
+
+DROP TABLE IF EXISTS review;
+
+CREATE TABLE IF NOT EXISTS review
+(
+    id          BIGINT(20) NOT NULL AUTO_INCREMENT,
+    user_email  varchar(45)   DEFAULT NULL,
+    date        datetime(6)   DEFAULT NULL,
+    rating      decimal(3, 2) DEFAULT NULL,
+    product_id  BIGINT(20)    DEFAULT NULL,
+    review_text text          DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE = InnoDB
+  auto_increment = 1
+  default charset = utf8mb3;

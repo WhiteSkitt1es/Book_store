@@ -4,7 +4,7 @@ function LibraryServices() {
             <div className="row p-4 align-items-center border shadow-lg">
                 <div className="col-lg-7 p-3">
                     <h1 className="display-4 fw-bold">
-                        Не получается что-то отыскать?
+                        Не удается что-то отыскать?
                     </h1>
                     <p className="lead">
                         Обратитесь в службу поддержки

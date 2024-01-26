@@ -1,6 +1,7 @@
 package com.example.bookstore.config;
 
 import com.example.bookstore.database.entity.Product;
+import com.example.bookstore.database.entity.Review;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -26,8 +27,10 @@ public class MethodDataRestConfig implements RepositoryRestConfigurer {
         };
 
         config.exposeIdsFor(Product.class);
+        config.exposeIdsFor(Review.class);
 
         disableHttpMethods(Product.class, config, unsupportedActions);
+        disableHttpMethods(Review.class, config, unsupportedActions);
 
         cors.addMapping(config.getBasePath() + "/**")
                 .allowedOrigins(clientUrl);

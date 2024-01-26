@@ -1,4 +1,5 @@
 import Book from "../../../models/Book";
+import {Link} from "react-router-dom";
 
 interface Props {
     book: Book;
@@ -53,9 +54,12 @@ function SearchBookItem({book}: Props) {
                     </div>
                 </div>
                 <div className="col-md-4 d-flex justify-content-center align-items-center">
-                    <a className="btn btn-md main-color text-white" href="/">
+                    <Link
+                        className="btn btn-md main-color text-white"
+                        to={`/checkout/${book.id}`}
+                    >
                         Подробнее
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

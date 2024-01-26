@@ -4,6 +4,7 @@ import NavigationBar from "./layouts/NavigationAndFooter/NavigationBar";
 import HomePage from "./layouts/HomePage/HomePage";
 import Footer from "./layouts/NavigationAndFooter/Footer";
 import {Redirect, Route, Switch} from "react-router-dom";
+import SearchBooksPage from "./layouts/SearchBookPage/SearchBookPage";
 
 function App() {
     return (
@@ -11,13 +12,13 @@ function App() {
             <NavigationBar/>
             <Switch>
                 <Route path="/" exact>
-                    <Redirect to="/home" />
+                    <Redirect to="/home"/>
                 </Route>
                 <Route path="/home" exact>
                     <HomePage/>
                 </Route>
                 <Route path="/search">
-
+                    <SearchBooksPage/>
                 </Route>
             </Switch>
             <Footer/>

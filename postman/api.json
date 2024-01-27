@@ -175,11 +175,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}api/products/search/findByTitleContaining?title=Продукт 11&page=0&size=2",
+					"raw": "{{HOST}}api/products/search/findByTitleContaining?title=Продукт 1&page=0&size=2",
 					"host": [
-						"{{HOST}}api"
+						"{{HOST}}"
 					],
 					"path": [
+						"api",
 						"products",
 						"search",
 						"findByTitleContaining"
@@ -187,7 +188,7 @@
 					"query": [
 						{
 							"key": "title",
-							"value": "Продукт 11"
+							"value": "Продукт 1"
 						},
 						{
 							"key": "page",
@@ -208,7 +209,30 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{HOST}}api/products/search/findByCategory?category=category_1&page=0&size=2",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"search",
+						"findByCategory"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "category_1"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
 				}
 			},
 			"response": []
@@ -308,7 +332,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}/api/reviews/search/findByUserEmailAndProductId?userEmail=user_1@ksergei.tech&productId=1",
+					"raw": "{{HOST}}/api/reviews/search/findTopByUserEmailAndProductId?userEmail=pasha.artemev48@gmail.com&productId=1",
 					"host": [
 						"{{HOST}}"
 					],
@@ -321,7 +345,7 @@
 					"query": [
 						{
 							"key": "userEmail",
-							"value": "user_1@ksergei.tech"
+							"value": "pasha.artemev48@gmail.com"
 						},
 						{
 							"key": "productId",

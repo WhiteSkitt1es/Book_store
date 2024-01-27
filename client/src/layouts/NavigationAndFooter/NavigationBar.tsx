@@ -13,6 +13,7 @@ function NavigationBar() {
         oktaAuth.revokeAccessToken();
         oktaAuth.closeSession();
     }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
             <div className="container-fluid">

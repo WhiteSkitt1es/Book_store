@@ -14,3 +14,8 @@ spring:
   data:
     rest:
       base-path: /api
+
+okta:
+  oauth2:
+    client-id: 0oaeqopcw0eGXAHlu5d7
+    issuer: https://dev-23230289.okta.com/oauth2/default

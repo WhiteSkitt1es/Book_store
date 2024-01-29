@@ -32,3 +32,17 @@ CREATE TABLE IF NOT EXISTS review
 ) ENGINE = InnoDB
   auto_increment = 1
   default charset = utf8mb3;
+
+DROP TABLE IF EXISTS product_order;
+
+CREATE TABLE IF NOT EXISTS product_order
+(
+    id          BIGINT(20) NOT NULL AUTO_INCREMENT,
+    user_email  varchar(45) DEFAULT NULL,
+    order_date  varchar(45) DEFAULT NULL,
+    return_date varchar(45) DEFAULT NULL,
+    product_id  BIGINT(20)  DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE = InnoDB
+  auto_increment = 1
+  default charset = utf8mb3;

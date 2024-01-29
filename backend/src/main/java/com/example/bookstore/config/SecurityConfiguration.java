@@ -22,14 +22,12 @@ public class SecurityConfiguration {
 
         http.csrf(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/products/secure/**")
-                .authenticated())
-                        /*.oauth2ResourceServer(oauth2ResourceServer ->
-                                oauth2ResourceServer
-                                        .jwt(jwt -> jwt
-                                                .decoder(jwtDecoder())
-                                        )
-                        )*/;
+                        .requestMatchers("/api/products/secure/**")
+                        .authenticated()
+                        .anyRequest().permitAll())
+                .oauth2ResourceServer(oauth2 ->
+                        oauth2.jwt(Customizer.withDefaults())
+                );
 
         http.cors(Customizer.withDefaults());
 
@@ -40,10 +38,4 @@ public class SecurityConfiguration {
 
         return http.build();
     }
-    /*
-    @Bean
-    public JwtDecoder jwtDecoder() {
-        return NimbusJwtDecoder.withPublicKey().build();
-    }
-     */
 }

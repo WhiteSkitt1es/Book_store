@@ -20,3 +20,7 @@ VALUES (1, 'pasha.artemev48@gmail.com', NOW(), 5, 1, 'Тестовый отзы�
        (3, 'pasha.artemev48@gmail.com', NOW(), 4, 2, 'Тестовый отзыв 3'),
        (4, 'pasha.artemev48@gmail.com', NOW(), 4, 2, 'Тестовый отзыв 4'),
        (5, 'pasha.artemev48@gmail.com', NOW(), 3, 3, 'Тестовый отзыв 5');
+
+INSERT INTO product_order
+VALUES (1, 'test_user@gmail.com', '01.01.2024', '01.08.2024', 1),
+       (2, 'test_user@gmail.com', '01.01.2024', '01.08.2024', 2);

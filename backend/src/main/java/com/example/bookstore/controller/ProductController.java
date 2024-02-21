@@ -7,6 +7,7 @@ import com.example.bookstore.utils.JWTParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+
 @CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/api/products")

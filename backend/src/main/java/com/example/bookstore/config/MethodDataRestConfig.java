@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 @Configuration
 public class MethodDataRestConfig implements RepositoryRestConfigurer {
 
+
     @Value("${client.host}")
     private String clientUrl;
 

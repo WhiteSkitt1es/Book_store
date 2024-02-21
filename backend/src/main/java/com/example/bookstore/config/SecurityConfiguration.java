@@ -22,7 +22,8 @@ public class SecurityConfiguration {
 
         http.csrf(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/products/secure/**")
+                        .requestMatchers("/api/products/secure/**",
+                                "/api/reviews/secure/**")
                         .authenticated()
                         .anyRequest().permitAll())
                 .oauth2ResourceServer(oauth2 ->

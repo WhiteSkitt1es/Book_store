@@ -14,7 +14,7 @@ public class ReviewController {
 
     private final ReviewService reviewService;
 
-    private String extractEmail(String token, String string) {
+    private String extractEmail(String token) {
         String email = JWTParser.jwtExtraction(token, "\"sub\"");
         if (email != null)
             return email;
@@ -25,7 +25,7 @@ public class ReviewController {
     public Boolean reviewProductByUser(
             @RequestHeader(value = "Authorization") String token,
             @RequestParam Long productId) throws Exception {
-        String userEmail = extractEmail(token, "\"sub\"");
+        String userEmail = extractEmail(token);
         if (userEmail == null) {
             throw new Exception("Ошибка пользователя");
         }
@@ -36,7 +36,7 @@ public class ReviewController {
     public void postReview(
             @RequestHeader(value = "Authorization") String token,
             @RequestBody ReviewRequestModel reviewRequest) throws Exception {
-        String userEmail = extractEmail(token, "\"sub\"");
+        String userEmail = extractEmail(token);
         if (userEmail == null) {
             throw new Exception("Ошибка пользователя");
         }

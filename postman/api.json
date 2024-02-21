@@ -496,6 +496,83 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "secure review user product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/reviews/secure/user/product?productId=1",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"reviews",
+						"secure",
+						"user",
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "secure review user product Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 4,\n    \"productId\": 11,\n    \"reviewDescription\": \"Мой отзыв из postman\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/api/reviews/secure/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"reviews",
+						"secure",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
